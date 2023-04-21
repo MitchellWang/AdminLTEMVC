@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AdminLTEMVC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AdminLTEMVC.styles.css" asp-append-version="true" />
+    <link href="~/lib/admin-lte/css/adminlte.min.css" rel="stylesheet" />
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" asp-append-version="true">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" asp-append-version="true">
+</head>
+<body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
+    <div class="wrapper">
+        @await Html.PartialAsync("_MainHeaderPartial")
+        @await Html.PartialAsync("_MainSidebarPartial")
+        <div class="content-wrapper">
+            @RenderBody()
+        </div>
+        @await Html.PartialAsync("_MainFooterPartial")
+        <aside class="control-sidebar control-sidebar-dark">
+            @RenderSection("controlSidebar", required: false)
+        </aside>
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/admin-lte/js/adminlte.min.js"></script>
+    <script src="~/lib/admin-lte/js/demo.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

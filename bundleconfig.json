@@ -1,0 +1,14 @@
+[
+  {
+    "outputFileName": "wwwroot/lib/admin-lte/js/demo.min.js",
+    "inputFiles": [
+      "wwwroot/lib/admin-lte/js/demo.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/admin-lte/css/adminlte.min.css",
+    "inputFiles": [
+      "wwwroot/lib/admin-lte/css/adminlte.css"
+    ]
+  }
+]
